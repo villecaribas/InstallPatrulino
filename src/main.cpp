@@ -21,15 +21,21 @@ void loop() {
     DigiKeyboard.println("powershell");
     DigiKeyboard.delay(500);
     DigiKeyboard.println("$client = new-object System.Net.WebClient");
-    
-    DigiKeyboard.println("$client.DownloadFile(\"https://github.com/villecaribas/patrulino/raw/main/PatruLINO.lnk\" , \"$env:userprofile/Desktop/PatruLINO.lnk\")");
-    delay(1000);
-    DigiKeyboard.println("$client.DownloadFile(\"https://github.com/villecaribas/patrulino/raw/main/img/lino.ico\" , \"c:\\tmp\\lino.ico\")");
-    delay(1000);
-   
-    DigiKeyboard.delay(7000);
+    DigiKeyboard.println("$client.DownloadFile(\"https://raw.githubusercontent.com/villecaribas/InstallPatrulino/master/downlino.ps1\" , \"$env:userprofile/Desktop/installLino.ps1\")");
+    DigiKeyboard.delay(500);
+    DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT | KEY_R);
+    DigiKeyboard.delay(500);
 
-    // DigiKeyboard.println("exit");
+    DigiKeyboard.print("powershell $env:userprofile\\Desktop\\installLino.ps1");
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.delay(1000);
+
+    DigiKeyboard.println("rm $env:userprofile\\Desktop\\installLino.ps1");
+    DigiKeyboard.delay(500);
+
+    DigiKeyboard.println("powershell $env:userprofile\\Desktop\\PatruLINO.lnk");
+    DigiKeyboard.delay(1000);
+    DigiKeyboard.println("exit");
 
     for (;;)
         ;
