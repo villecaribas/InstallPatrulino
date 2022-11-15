@@ -8,3 +8,4 @@ $WScriptShell = New-Object -ComObject WScript.Shell
 $shortcut = $WScriptShell.CreateShortcut("$env:userprofile\Desktop\PatruLINO.lnk")
 $shortcut.IconLocation = "C:\\tmp\lino.ico"
 $shortcut.Save()
+
