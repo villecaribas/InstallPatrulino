@@ -10,4 +10,3 @@ $shortcut.IconLocation = "C:\\tmp\lino.ico"
 $shortcut.Save()
 
 rm $env:userprofile\\Desktop\\installLino.ps1
-
