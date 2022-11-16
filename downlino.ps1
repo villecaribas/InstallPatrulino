@@ -11,4 +11,4 @@ $shortcut.Save()
 
 powershell rm $env:userprofile\\Desktop\\installLino.ps1
 
-powershell $env:userprofile\\Desktop\\PatruLINO.lnk
+# powershell $env:userprofile\\Desktop\\PatruLINO.lnk

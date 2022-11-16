@@ -16,23 +16,22 @@ void loop() {
 
     // If the system hasn't been configured to run scripts, uncomment the lines bellow
     // DigiKeyboard.println("powershell Start-Process cmd -Verb runAs");
-    
     // DigiKeyboard.delay(750);
     // DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
-    DigiKeyboard.delay(5000);
+
+
+    //Altera a politica de execução de powershell scripts
+    DigiKeyboard.delay(500);
     DigiKeyboard.println("Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Confirm:$false");
     DigiKeyboard.print("S");
+    DigiKeyboard.delay(100);
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
-    DigiKeyboard.delay(750);
+    DigiKeyboard.delay(500);
 
-    // Execultar o script de instalacao
-    DigiKeyboard.sendKeyStroke(0);
-    DigiKeyboard.delay(500);
-    DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT | KEY_R);
-    DigiKeyboard.delay(500);
     DigiKeyboard.println("powershell $env:USERPROFILE\\Desktop\\installLino.ps1");
     // DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(1000);
+    DigiKeyboard.println("powershell $env:userprofile\\Desktop\\PatruLINO.lnk");
 
     for (;;)
         ;
