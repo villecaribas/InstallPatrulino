@@ -9,6 +9,6 @@ $shortcut = $WScriptShell.CreateShortcut("$env:userprofile\Desktop\PatruLINO.lnk
 $shortcut.IconLocation = "C:\\tmp\lino.ico"
 $shortcut.Save()
 
-powershell rm $env:userprofile\\Desktop\\installLino.ps1
+#powershell rm $env:userprofile\\Desktop\\installLino.ps1
 
 powershell $env:userprofile\\Desktop\\PatruLINO.lnk
