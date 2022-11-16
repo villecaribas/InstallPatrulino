@@ -16,14 +16,14 @@ void loop() {
 
     // If the system hasn't been configured to run scripts, uncomment the lines bellow
     DigiKeyboard.println("powershell Start-Process cmd -Verb runAs");
-    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    // DigiKeyboard.sendKeyStroke(KEY_ENTER);exit
+
     DigiKeyboard.delay(750);
     DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
-    DigiKeyboard.delay(2750);
+    DigiKeyboard.delay(3000);
     DigiKeyboard.print("powershell Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Confirm:$false");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(750);
-    // DigiKeyboard.println("exit");
 
     // Execultar o script de instalacao
     DigiKeyboard.sendKeyStroke(0);
@@ -34,13 +34,6 @@ void loop() {
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(1000);
 
-    // Apagar o script de instalacao
-    // DigiKeyboard.println("rm $env:userprofile\\Desktop\\installLino.ps1");
-    // DigiKeyboard.delay(500);
-
-    // Execultar o chrome com o patrulino
-    // DigiKeyboard.println("powershell $env:userprofile\\Desktop\\PatruLINO.lnk");
-    // DigiKeyboard.delay(1000);
     DigiKeyboard.println("exit");
     DigiKeyboard.delay(500);
     DigiKeyboard.println("exit");
